@@ -7,4 +7,3 @@ admin.site.register(Meeting)
 admin.site.register(Room)
 
 
-hello
