@@ -4,9 +4,11 @@
 
 {% block content %}
 <h1>Plan a new meeting</h1>
-<form>
+<form method="post">
     <table>
         {{ form }}
     </table>
-</from>
+    {% csrf_token %}
+    <button type="submit">Create</button>
+</form>
 {% endblock %}
