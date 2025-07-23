@@ -7,11 +7,11 @@ from meetings.models import Meeting
 
 def welcome(request):
     return render(request, "website/welcome.html",
-                  {"num_meetings":Meeting.objects.count()})
+                  {"meetings":Meeting.objects.all()})
 
 
 def date(request):
-    return HttpResponse("This session is serverd at " + str(datetime.now()))
+    return HttpResponse("This page was serverd at " + str(datetime.now()))
 
 def about(request):
-    return HttpResponse("My Self Dhanush and I am writing Django Scripts")
+    return HttpResponse("I'm Reindert and I make courses for Pluralsight.")
